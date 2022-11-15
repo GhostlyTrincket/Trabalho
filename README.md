@@ -1,2 +1,2 @@
 # Trabalho
-Repositorio para um trabalho da escola
+Repositorio para o trabalho de final de ano.
