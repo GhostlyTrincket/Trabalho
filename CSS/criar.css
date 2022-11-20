@@ -1,0 +1,28 @@
+/* estilos globais */
+
+*, *::before, *::after {
+	box-sizing:border-box;
+}
+
+body {
+	padding:0;
+	margin:0;
+}
+
+/* main */	
+
+#formulario {
+	border:1px solid black;
+	height:500px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+
+.sessao {
+	padding:.75em;
+	display:flex;
+	flex-flow: column nowrap;
+	align-items:center;
+}
