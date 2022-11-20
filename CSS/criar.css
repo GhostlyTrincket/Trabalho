@@ -25,3 +25,7 @@ body {
 	flex-flow: column nowrap;
 	align-items:center;
 }
+
+.titulo {
+	font-size:13px;
+}
