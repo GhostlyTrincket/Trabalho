@@ -11,6 +11,17 @@ body {
 
 /* main */
 
+#formulario  {
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+
 .sessao {
-	padding:.25em;
+	padding:.75em;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
 }
