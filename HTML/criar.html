@@ -11,21 +11,21 @@
 
 <body>
 	<main>
-		<div>
+		<div id="area-form">
 			<form action="../PHP/criar.php" method="GET" id="formulario">
 				<div class="informar-nome sessao">
-					<label for="user-name" class="titulo">Nome de usuario:</label>
-					<input type="text" name="user-name" id="user-name" required>
+					<label for="nome_user" class="titulo">Nome de usuario:</label>
+					<input type="text" name="nome_user" id="nome_user" required>
 				</div>
 				<div class="informar-senha sessao">
-						<label for="user-senha"class="titulo">Senha de usuario:</label>
-					<input type="password" name="user-senha" id="user-senha" required>
+					<label for="senha_user" class="titulo">Senha de usuario:</label>
+					<input type="password" name="senha_user" id="senha_user" required>
 				</div>
 				<div class="informar-email sessao">
-					<label for="user-email" class="titulo">Email do usuario:</label>
-					<input type="email" name="user-email" id="user-email" required>
+					<label for="email_user" class="titulo">Email do usuario:</label>
+					<input type="email" name="email_user" id="email_user" required>
 				</div>
-				<button type="submit">Cadastrar</button>
+				<button type="submit" id="cadastrar">Cadastrar</button>
 			</form>
 		</div>
 	</main>
