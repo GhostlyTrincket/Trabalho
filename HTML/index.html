@@ -1,42 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 	<head>
-		<title>Progress Code - Main Hub</title>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="../CSS/estilo.css" />
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="../CSS/index.css">
+	    <link rel="stylesheet" media="screen and (max-width:800px)" href="../CSS/mobile.css">
+	    <script src="./js/sessao.js" defer></script>
+	    <title>Progress Code</title>
 	</head>
+
 	<body>
-		<header id="main-header">
-			<h1>Progress Code<h1>
-			<nav id="main-navbar">
-				<ol>
-					<li class="lista logar"><a href="./logar.html">Logue em sua conta!</a></li>
-					<li class="lista criar"><a href="./criar.html">Crie a sua conta!</a></li>
-				</ol>
-			</nav>
-		</header>
-		<main>
-			<div id="container-principal">
-				<div class="post-container">
-					<form action="../PHP/postar.php" method="GET">
-						<input type="text" placeholder="Faça um post!" id="postar" name="postar" />
-					</form>
-				</div>
-				<div id="container-cards">
-					<div class="card-containers">
-						<div class="card">
-							<div class="header-card">
-								<h2>Titulo do post aqui</h2>
-							</div>
-							<div class="texto-card">
-								<p>lorem ipsum darem siamet iocum dorem dolor</p>
-							</div>
-						</div>
-					</div>
-				</div>
+	    <nav id="navbar">
+		<div id="navbar-container">
+		    <h1 class="logo">Progress code</h1>
+		    <h3 class="italico">
+			"Nós pensamos em soluções para sempre progredir"
+			<p> -Estevan Merlin, Criador do Progress Code</p>
+		    </h3>
+		    <ul id="navbar-items">
+			<li><a href="./criar.html">Crie a sua conta!</a></li>
+			<li><a href="./logar.html">Logue em sua conta!</a></li>
+		    </ul>
+		</div>
+	    </nav>
+
+	    <header id="showcase">
+		<div id="showcase-container">
+		    <h2>Bem vindo ao nosso Hub de discussões!</h2>
+		    <p>Aqui você poderá perguntar, conversar e dar ideias sobre futuros produtos!</p>
+		    <br>
+		    <button id="faca-post" style="display:none">Faça o seu primeiro post</button>
+		</div>
+	    </header>
+
+	    <!-- About -->
+	    <section id="clients">
+		<div class="headline">Nossos parceiros</div>
+		<div id="clients-container">
+		    <img src="img/Técnico em desenvolvimento de sistemas.png" class="client" alt="">
+		</div>
+	    </section>
+
+	    <section id="features">
+		<div class="headline">O que fazemos</div>
+		<div id="features-container">
+		    <div class="feature">
+			<i class="fas fa-tachometer-alt fa-3x"></i>
+			<span class="feature-title">Somos especialistas</span>
+			<p>Somos especialistas em desenvolvimento de sistemas em WP. Soluções completas. Projetos personalizados criados para a sua necessidade.</p>
+		    </div>
+		    <div class="feature">
+			<i class="fas fa-code fa-3x"></i>
+			<span class="feature-title">Hospedagem e Suporte Integral</span>
+			<p>Hospedagem e Suporte Integral. Sites responsivos.</p>
+		    </div>
+		    <div class="feature">
+			<i class="fas fa-layer-group fa-3x"></i>
+			<span class="feature-title">visando a automação de todos os processos</span>
+			<p>aparelhos celulares e tablets, visando a automação de todos os processos relativos às Tecnologias de Informação e Comunicação</p>
+		    </div>
+		</div>
+	    </section>
+
+	    <section id="product">
+		<div class="headline">Nosso </div>
+		<div id="product-container">
+		    <img src="img/Técnico em desenvolvimento de sistemas.png" alt="" class="iphone-x">
+		    <div id="items">
+			<div class="item">
+			    <i class="fas fa-map-marked fa-2x color-primary"></i>
+			    <p>É o profissional que analisa e projeta sistemas.</p>
 			</div>
-		</main>
-		<footer></footer>
+			<div class="item">
+			    <i class="fas fa-users fa-2x color-primary"></i>
+			    <p>realiza testes e mantém sistemas de informação.</p>
+			</div>
+			<div class="item">
+			    <i class="fas fa-glass-cheers fa-2x color-primary"></i>
+			    <p>implementa e mantém bancos de dados.</p>
+			</div>
+			<div class="item">
+			    <i class="fas fa-book-open fa-2x"></i>
+			    <p>podendo também atuar como profissional autônomo.</p>
+			</div>
+		    </div>
+		</div>
+	    </section>
+
+	    <div id="testimonials">
+		<div class="headline"></div>
+		<div id="testimonials-container">
+		    <div class="testimonial">
+			<img src="img/showcase.jpg" alt="" class="testimonial-image">
+			<p></p>
+		    </div>
+		    <div class="testimonial">
+			<img src="img/showcase.jpg" alt="" class="testimonial-image">
+			<p></p>
+		    </div>
+		</div>
+	    </div>
+	    </div>
+
+	    <section id="gallery">
+		<div class="headline">Galeria</div>
+		<div id="gallery-container">
+		    <img src="img/maya 1.jpg" alt="" class="gallery-image">
+		</div>
+	    </section>
+
+	    <footer id="footer">
+		<div class="sociais">
+		    <div class="social">
+			<a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+		    </div>
+		    <div class="social">
+			<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+		    </div>
+		</div>
+		<p>Copyright 2020 - Todos os direitos reservados.</p>
+		<p>Feito por ESTEVAN</p>
+	    </footer>
+
+	    <!-- Font Awesome -->
+	    <script src="https://kit.fontawesome.com/f9e19193d6.js" crossorigin="anonymous"></script>
+
+	    <!-- jQuery CDN -->
+	    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	    <!-- Our JS file -->
+	    <script src="js/main.js"></script>
 	</body>
+
 </html>
