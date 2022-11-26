@@ -8,7 +8,7 @@
 	include("./conectar.php");
 	$pdo = conectar();
 
-	$sql = "INSERT INTO usuario(nome_usuario, senha_usuario, email_usuario) VALUES (?,?,?)";
+	$sql = "INSERT INTO user_info(nome_usuario, senha_usuario, email_usuario) VALUES (?,?,?)";
 	$stmt = $pdo->prepare($sql);
 	$stmt->bindParam(1, $nome);
 	$stmt->bindParam(2, $senha);
@@ -20,4 +20,4 @@
 	} else {
 	  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 	}
->
+?>
