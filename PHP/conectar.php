@@ -1,23 +1,18 @@
 <?php
-    function conectar(){
+	function conn() {
+		$db_host = "localhost";
+		$db_name = "site";
+		$db_user = "root";
+		$db_passwd = "ghostlyTr1nk37";
+		$db_driver = "mysql";
 
-    # Informações sobre o banco de dados:
+		try {
+			$PDO_CONN = new PDO("$db_driver:host=$db_host; dbname=$db_name", $db_user, $db_passwd);
+		} catch(PDOException $PDO_ERROR) {
+			echo("Houve um erro inesperado.<br> Tipo do erro:".$PDO_ERROR);
+			die();
+		}
 
-    $db_host = "localhost";
-    $db_nome = "usuario";
-    $db_usuario = "root";
-    $db_senha = "";
-    $db_driver = "mysql";
-
-    try{
-        // Faz conexão com banco de daddos
-        $pdo =  new PDO("$db_driver:host=$db_host; dbname=$db_nome", $db_usuario, $db_senha);
-    } catch(PDOException $erro){
-        echo 'Falha ao conectar no banco de dados: '.$erro->getMessage();
-        die;
-    }
-	
-    return $pdo;
-
-	}	
+		return $PDO_CONN;
+	}
 ?>
