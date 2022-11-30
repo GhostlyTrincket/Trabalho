@@ -1,34 +1,35 @@
 <?php
-    // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
-    if (!empty($_POST) AND (empty($_POST['nome_user']) OR empty($_POST['senha_user']))) {
-        header("Location: login.html"); 
-        exit;
-    }
+	$db_servername	= "localhost";
+	$db_user	=  "root";
+	$db_passwd	= "ghostlyTr1nk37";
+	$db_name	= "site";
 
+	$DB_CONNECT = mysqli_connect($db_servername, $db_user, $db_passwd, $db_name);
 
-    $usuario = $_POST['nome_user'];
-    $senha = $_POST['senha_user'];
+	if(!$DB_CONNECT) {
+		echo("Houve um erro ao conectar: ".mysqli_connect_error());
+		die();
+	}
 
-    include("./conectar.php"); 
-    $pdo=conectar();
+	if(!empty($_POST) AND (empty($_POST['nome_usuario']) OR empty($_POST['senha_usuario']))) {
+		header('Location: ../HTML/logar.html');
+		exit;
+	}
 
-    $sql = "SELECT nome_usuario, senha_usuario FROM user_info WHERE nome_usuario = ? and senha_usuario = ? and ativo = 1";
-    $stmt=$pdo->prepare($sql);
-    $stmt->bindParam(1, $usuario);
-    $stmt->bindParam(2, $senha);
-    $stmt->execute();
+	$user = $_POST['nome_usuario'];
+	$passwd = $_POST['senha_usuario'];
+	
+	$SQL_OP = "SELECT nome_usuario, senha_usuario FROM user_info WHERE nome_usuario = '$user' AND senha_usuario = '$passwd'
+		AND ativo = 1";
+	$RESULT = mysqli_query($DB_CONNECT, $SQL_OP);
 
-    // Validação do usuário/senha digitados
-
-    if  ($stmt->execute()<1) {
-        // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
-        echo "Login inválido!";     
-    } else {
-        
-        echo "entrou";
-        header("Location:home.php");
-        session_start();
-        $_SESSION['nome_user'] = $usuario;
-    }
-
+	if(mysqli_num_rows($RESULT) != 1) {
+		echo("Login invalido!");
+	} else {
+		header("Location: ../HTML/index.html");
+		session_start();
+		$_SESSION['nome_usuario'] = $user;
+	}	
 ?>
+
+
