@@ -1,0 +1,93 @@
+/* estilos globais */
+
+*, *::before, *::after {
+	box-sizing:border-box;
+}
+
+body, h1, h2, h3, h4, ul, ol, p {
+	padding:0;
+	margin:0;
+}
+
+body {
+	font-family:'Inter', sans-serif;
+}
+
+header {
+	text-align:center;
+}
+
+main {
+	padding:0.75em;
+	display:flex;
+	flex-direction:column;
+}
+
+footer {
+	text-align:center;
+	background-color:black;
+}
+
+section {
+	margin: 0.75em;
+}
+
+ol, ul {
+	list-style:none;
+}
+
+/* header */
+
+#main-header a {
+	text-decoration:none;
+}
+
+#navbar-principal ol {
+	display:flex;
+	justify-content:space-evenly;
+}
+
+/* main */
+
+.shortcut {
+	text-align:center;
+}
+
+.shortcut li {
+	border:1px solid black;
+	padding:0.5em;
+	border-radius:1.5em
+}
+
+.shortcut ul {
+	display:flex;
+	justify-content:start;
+	gap:1em;
+	flex-wrap:wrap;
+	font-size:1rem;
+}
+
+#acoes {
+	font-size:.25em;
+}
+
+.card {
+	padding:1em;
+}
+/* pseudos-seletores e classes de utilidade */
+
+.ao-passar:hover {
+	text-decoration:underline;
+	color:blue;
+}
+
+.sem-estilo {
+	text-decoration:none;
+	color:black;
+}
+
+/* footer */
+
+footer p {
+	color:white;
+}

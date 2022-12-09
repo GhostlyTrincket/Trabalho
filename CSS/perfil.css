@@ -1,0 +1,50 @@
+/* estilos globais */
+
+*, *::before, *::after {
+	box-sizing:border-box;
+}
+
+body {
+	font-family:'Inter', sans-serif;
+}
+
+body, h1, h2, h3 {
+	padding:0;
+	margin:0;
+}
+
+header {
+	text-align:center;
+}
+
+main {
+	display:flex;
+	flex-wrap:wrap;
+}
+
+ol, ul {
+	list-style:none;
+}
+
+/* header */
+
+/* main */
+
+#configs ol {
+	padding:0.25em;
+}
+
+.user-historia {
+	flex-grow:1;
+}
+
+.lista ol {
+	display:flex;
+	justify-content:space-evenly;
+}
+
+.user-config {
+	text-align:center;
+}
+
+/* pseudo seletores */
