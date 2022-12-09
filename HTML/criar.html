@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../CSS/criar.css" />
-    <title>Progress Code - Account Creation Screen</title>
-</head>
-
-<body>
-	<main>
-		<div id="area-form">
-			<form action="../PHP/criar.php" method="GET" id="formulario">
-				<div class="informar-nome sessao">
-					<label for="nome_user" class="titulo">Nome de usuario:</label>
-					<input type="text" name="nome_user" id="nome_user" required>
+	<head>
+		<title>Progress Code - Criação de conta</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../CSS/2.css" />
+	<head>
+	<body>
+		<header>
+			<h2>Crie a sua conta</h2>
+		</header>
+		<main>
+			<form action="../PHP/criar.php" method="GET" id="cadastro">
+				<div class="campo-texto campo">
+					<label for="nome_usuario" class="titulo">Crie um nome de usuario:</label>
+					<input type="text" name="nome_usuario" id="nome_usuario" class="input" required>
 				</div>
-				<div class="informar-senha sessao">
-					<label for="senha_user" class="titulo">Senha de usuario:</label>
-					<input type="password" name="senha_user" id="senha_user" required>
+				<div class="campo-senha campo">
+					<label for="senha_usuario" class="titulo">Crie uma senha:</label>
+					<input type="password" name="senha_usuario" id="senha_usuario" class="input" required>
 				</div>
-				<div class="informar-email sessao">
-					<label for="email_user" class="titulo">Email do usuario:</label>
-					<input type="email" name="email_user" id="email_user" required>
+				<div class="campo-email campo">
+					<label for="email_usuario" class="titulo">Insira o seu email:</label>
+					<input type="email" name="email_usuario" id="email_usuario" class="input" required>
 				</div>
 				<button type="submit" id="cadastrar">Cadastrar</button>
 			</form>
-		</div>
-	</main>
+		</main>
+	</body>
 </html>
