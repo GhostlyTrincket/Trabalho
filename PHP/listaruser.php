@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Administration Screen</title>
+		<title>Administração de usuarios</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script defer language="Javascript">
 			function confirmDel(ID) {
-				const ANSWR = confirm("Would you like to delete this user?");
+				const ANSWR = confirm("Deseja deletar este usuário?");
 
 				if(ANSWR == true) {
 					window.location.href = `excluiruser.php?ID_Usuario=${ID}`;
@@ -49,13 +49,13 @@
 						<td>".$row['ID_Usuario']."</td>
 						<td>".$row['nome_usuario']."</td>
 						<td>".$row['email_usuario']."</td>
-						<td><a href='editaruser.php?ID_Usuario=".$row['ID_Usuario']."'>Edit User?</a></td>
-						<td><a href='javascript:func' onclick='confirmDel(".$row['ID_Usuario'].")'>Exclude User?</a></td>
+						<td><a href='editaruser.php?ID_Usuario=".$row['ID_Usuario']."'>Editar usuario</a></td>
+						<td><a href='javascript:func' onclick='confirmDel(".$row['ID_Usuario'].")'>Excluir usuario</a></td>
 					</tr>
 				");
 			}
 		} else {
-			echo("No results where found.");
+			echo("Não á registros.");
 		}
 
 		?>

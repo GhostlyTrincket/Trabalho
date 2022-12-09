@@ -15,7 +15,8 @@
 
 	if($ARG->execute()) {
 		echo("Informações registradas!");
-		header('Location: a.php');
+		header('Location:./profile.php');
+
 		session_start();
 		$_SESSION['nome_usuario'] = $get_name;
 	} else {
