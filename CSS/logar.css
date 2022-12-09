@@ -5,31 +5,45 @@
 }
 
 body {
+	font-family:'Inter', sans-serif;
+}
+
+body, input {
 	padding:0;
 	margin:0;
 }
 
+header {
+	text-align:center;
+}
+
+/* header */
+
 /* main */
 
-#formulario  {
-	height:100vh;
+#formulario {
+	height:50vh;
 	display:flex;
 	flex-direction:column;
 	align-items:center;
-	justify-content:center;
+	justify-content:space-evenly;
 }
 
 #logar {
 	border:none;
 	border-radius:2em;
-	padding:.5em;
+	padding:0.55em;
+	cursor:pointer;
 }
 
-.sessao {
-	padding:.75em;
+.campo {
+	padding:0.75em;
 	display:flex;
 	flex-direction:column;
 	align-items:center;
 }
 
-
+.titulo {
+	font-size:1em;
+	margin-bottom:0.25em;
+}

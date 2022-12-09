@@ -5,28 +5,38 @@
 }
 
 body {
+	font-family:'Inter', sans-serif;
+}
+
+body, input {
 	padding:0;
 	margin:0;
 }
 
-/* main */	
+/* header */
 
-#formulario {
-	height:100vh;
+header {
+	text-align:center;
+}
+
+/* main */
+
+#cadastro {
+	height:50vh;
 	display:flex;
 	flex-direction:column;
+	justify-content:space-evenly;
 	align-items:center;
-	justify-content:center;
 }
 
 #cadastrar {
 	border:none;
 	border-radius:2em;
-	padding:.75em;
+	padding:0.5em;
+	cursor:pointer;
 }
 
-.sessao {
-	padding:.25em;
+.campo {
 	display:flex;
 	flex-direction:column;
 	align-items:center;
@@ -34,5 +44,9 @@ body {
 
 .titulo {
 	font-size:1em;
+	margin-bottom:0.25em;
 }
 
+.input {
+	width:15em;
+}
